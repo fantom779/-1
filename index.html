@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ХОХО ITS FAKE</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family:Montserrat,sans-serif;
+    background:#08080b;
+    color:white;
+}
+
+.slide{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 20% 20%,#ff174455 0%,transparent 25%),
+        radial-gradient(circle at 80% 80%,#7b2cff55 0%,transparent 28%),
+        #08080b;
+}
+
+/* шум */
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:-50%;
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity:.25;
+    animation:noise .15s infinite;
+}
+
+@keyframes noise{
+    0%{transform:translate(0,0)}
+    25%{transform:translate(2%,1%)}
+    50%{transform:translate(-1%,2%)}
+    75%{transform:translate(1%,-1%)}
+    100%{transform:translate(0,0)}
+}
+
+/* декоративні кола */
+.circle{
+    position:absolute;
+    border:2px solid #ffffff15;
+    border-radius:50%;
+    animation:spin 18s linear infinite;
+}
+
+.c1{width:650px;height:650px}
+.c2{width:850px;height:850px;animation-duration:25s}
+.c3{width:1050px;height:1050px;animation-duration:35s}
+
+@keyframes spin{
+    to{transform:rotate(360deg)}
+}
+
+.content{
+    position:relative;
+    z-index:5;
+    text-align:center;
+}
+
+.small{
+    font-size:20px;
+    letter-spacing:8px;
+    color:#ff315b;
+    animation:appear .8s ease both;
+}
+
+h1{
+    font-size:clamp(70px,12vw,180px);
+    line-height:.78;
+    font-weight:900;
+    letter-spacing:-8px;
+    margin:25px 0;
+    text-shadow:
+        0 0 20px #ff1744aa,
+        8px 8px 0 #ffffff10;
+    animation:slam .8s cubic-bezier(.17,.89,.32,1.3) both;
+}
+
+.hoxo{
+    color:white;
+}
+
+.fake{
+    color:#ff315b;
+    display:inline-block;
+    animation:
+        glitch 1.8s infinite,
+        pulse 1.5s infinite;
+}
+
+.meme{
+    display:inline-block;
+    margin:10px 15px;
+    padding:12px 25px;
+    border:2px solid #ffffff22;
+    border-radius:18px;
+    background:#ffffff0b;
+    backdrop-filter:blur(10px);
+    font-size:25px;
+    transform:rotate(-3deg);
+    animation:float 3s ease-in-out infinite;
+}
+
+.meme:nth-child(2){
+    transform:rotate(4deg);
+    animation-delay:.4s;
+}
+
+@keyframes slam{
+    from{
+        opacity:0;
+        transform:scale(2.2) rotate(-8deg);
+        filter:blur(15px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes appear{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.08)}
+}
+
+@keyframes float{
+    50%{transform:translateY(-12px) rotate(-3deg)}
+}
+
+@keyframes glitch{
+    0%,90%,100%{text-shadow:none}
+    92%{text-shadow:5px 0 #00ffff,-5px 0 #ff003c}
+    94%{text-shadow:-8px 0 #00ffff,8px 0 #ff003c}
+    96%{text-shadow:3px 0 #00ffff,-3px 0 #ff003c}
+}
+
+/* 67 */
+.number{
+    position:absolute;
+    right:-20px;
+    bottom:-100px;
+    font-size:55vw;
+    line-height:.7;
+    font-weight:900;
+    color:#ffffff04;
+    user-select:none;
+}
+
+/* мемні смайли */
+.emoji{
+    position:absolute;
+    font-size:70px;
+    animation:emojiFloat 4s ease-in-out infinite;
+    z-index:4;
+}
+
+.e1{left:8%;top:15%;transform:rotate(-15deg)}
+.e2{right:9%;top:18%;animation-delay:1s;transform:rotate(15deg)}
+.e3{left:13%;bottom:15%;animation-delay:2s}
+.e4{right:13%;bottom:14%;animation-delay:.5s}
+
+@keyframes emojiFloat{
+    50%{
+        transform:translateY(-25px) rotate(10deg) scale(1.15);
+    }
+}
+
+.sub{
+    margin-top:25px;
+    font-size:15px;
+    letter-spacing:5px;
+    color:#ffffff66;
+}
+</style>
+</head>
+
+<body>
+
+<div class="slide">
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+    <div class="number">67</div>
+
+    <div class="emoji e1">💀</div>
+    <div class="emoji e2">😭</div>
+    <div class="emoji e3">🤨</div>
+    <div class="emoji e4">🗿</div>
+
+    <div class="content">
+
+        <div class="small">ПОКОЦО • 67 • BREAKING NEWS</div>
+
+        <h1>
+            <span class="hoxo">ХОХО,</span><br>
+            <span class="fake">ІТС ФЕЙК</span>
+        </h1>
+
+        <div>
+            <span class="meme">ПОКОЦО 💀</span>
+            <span class="meme">67 😭</span>
+        </div>
+
+        <div class="sub">
+            ДЖЕРЕЛО: БРО, ПОВІР МЕНІ
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
